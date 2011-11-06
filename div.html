@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jquery test</title>
+	<style>
+	
+	
+	.center div { background:#cd56cd; margin:10px; width:1000px;
+        height:500px; float:left; }
+
+	a {
+	float:left; 
+	text-decoration:none;	
+	}
+	li{
+	list-style-type:none;
+	}
+	</style>
+	
+	<script type="text/javascript" src="Jquery_1.7.js">
+	</script>
+	
+	<script>
+	
+	$(function(){ 
+		var divsX = $('div.center > div');
+		divsX.hide().filter('#yi').show();
+
+		$('.menu a').click(function(){
+			divsX.hide();
+			divsX.filter(this.hash).show();
+		});
+	});
+
+	/*$(function()
+  {$("#link_2").click(function () {       
+	  if ($(".side_menu").is(":hidden")) {         $(".side_menu").show("slow");       }
+	  else {$(".side_menu").slideUp();       }     });    });*/
+	</script>
+	
+	
+</head>    
+<body>
+
+<div class="menu">
+<ul>
+
+	<li><a href="#yi" >Link</a></li>
+		<br/>
+	<li><a href="#ar" >Link2</a></li>
+		
+</ul>
+</div>		
+	
+	
+	<div class="center">
+		<div id="yi">    
+		FIRST
+		</div>
+			
+		<div id="ar">    
+		SECOND
+		</div> 
+	
+	</div>
+
+</body>
+</html>
+
+
+
+
+
